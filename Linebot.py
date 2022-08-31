@@ -20,19 +20,16 @@ def callback(): #checking if the input message is right
         abort(400)
     return 'OK'
 
-'''@handler.add(MessageEvent, message = TextMessage)
+@handler.add(MessageEvent, message = TextMessage)
 def handle_message(event):
-    Line_bot_api.reply_message(event.reply_token, TextSendMessage(text = event.message.text))'''
-@handler.add(JoinEvent)
-def Join_auto_message(event):
-   #無法自動取得群組成員(初次加入時手動輸入群組成員)
+    Line_bot_api.reply_message(event.reply_token, TextSendMessage(text = event.message.text))
 
-@handler.add(MessageEvent, message = TextMessage) #The text Message you got from Linbot
+'''@handler.add(MessageEvent, message = TextMessage) #The text Message you got from Linbot
 def handle_msg(event):
     #Line_bot_api.push_message('Testing: Peronsal ID or Group ID', TextSendMessage(text=''))
     if(event.message.text=="start"):
         message=TextSendMessage(event.source.group_id)
-        Line_bot_api.reply_message(event.reply_token, message) #get the group ID
+        Line_bot_api.reply_message(event.reply_token, message)''' #get the group ID
     
     
 
